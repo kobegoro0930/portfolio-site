@@ -1,21 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link from "../node_modules/next/link";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>#</title>
-        <meta name="description" content="#" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <header></header>
-
-      <p>Hello World!</p>
-
-      <footer></footer>
-    </>
+    <div>
+      <h1>TOPページ</h1>
+      <ul>
+        <li><Link href="/about">自己紹介</Link></li>
+        <li><Link href="/skills">スキル</Link></li>
+        <li><Link href="/posts">日々の記録</Link></li>
+      </ul>
+    </div>
   )
 }
