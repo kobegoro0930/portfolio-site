@@ -1,25 +1,31 @@
 import Link from "../../node_modules/next/link";
 import { client } from "../../libs/client";
+import { Button, Container, Typography } from "../../node_modules/@mui/material/index";
 
 export default function Post({ blog }) {
   return (
-    <main>
-      <h1>{blog.title}</h1>
-      <p>{blog.publishedAt}</p>
+    <Container maxWidth="lg">
+      <Typography variant='h4' component='h1' py={3}>
+        {blog.title}
+      </Typography>
+      <Typography mb={1} color="text.secondary">
+        {new Date(blog.publishedAt).toLocaleDateString()}
+      </Typography>
       <div
         dangerouslySetInnerHTML={{
           __html: `${blog.body}`,
         }}
       />
-      <Link href="/posts">一覧へ戻る</Link>
-    </main>
+      <Button color="primary">
+        <Link href="/posts">一覧へ戻る</Link>
+      </Button>
+    </Container>
   )
 }
 
 // 静的生成のためのパスを指定
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "blogs" });
-
   const paths = data.contents.map((content) => `/posts/${content.id}`);
   return { paths, fallback: false };
 };
@@ -28,7 +34,6 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const id = context.params.id;
   const data = await client.get({ endpoint: "blogs", contentId: id });
-
   return {
     props: {
       blog: data,

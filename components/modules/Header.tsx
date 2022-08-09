@@ -4,7 +4,7 @@ import Link from '../../node_modules/next/link';
 
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }} m={1}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -14,13 +14,13 @@ export default function Header() {
             <Link href="/">TOP</Link>
           </Button>
           <Button color="inherit">
-            <Link href="/about">自己紹介</Link>
+            <Link href="/about">About</Link>
           </Button>
           <Button color="inherit">
-            <Link href="/skills">スキル</Link>
+            <Link href="/skills">Skills</Link>
           </Button>
           <Button color="inherit">
-            <Link href="/posts">日々の記録</Link>
+            <Link href="/posts">Posts</Link>
           </Button>
         </Toolbar>
       </AppBar>
