@@ -5,15 +5,16 @@ import imageSrc from '../public/work.jpg';
 export default function Home() {
   return (
     <>
-      <Typography variant="h1" component="h2" p={4} mb={5}>
-        Web Developer
-        <br />
-        Front-End Engineer
-      </Typography>
-      <Container maxWidth='sm'>
-        <Image src={imageSrc} layout='responsive' alt='logo' />
+      <Container maxWidth="lg">
+        <Typography variant="h1" component="h2" p={4} mb={5}>
+          Web Developer
+          <br />
+          Front-End Engineer
+        </Typography>
+        <Container maxWidth='sm'>
+          <Image src={imageSrc} layout='responsive' alt='logo' />
+        </Container>
       </Container>
-
     </>
   )
 }

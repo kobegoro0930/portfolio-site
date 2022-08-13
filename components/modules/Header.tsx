@@ -11,16 +11,16 @@ export default function Header() {
             KEN TERAMOTO
           </Typography>
           <Button color="inherit">
-            <Link href="/">TOP</Link>
+            <Link href="/"><a>TOP</a></Link>
           </Button>
           <Button color="inherit">
-            <Link href="/about">About</Link>
+            <Link href="/about"><a>About</a></Link>
           </Button>
           <Button color="inherit">
-            <Link href="/skills">Skills</Link>
+            <Link href="/skills"><a>Skills</a></Link>
           </Button>
           <Button color="inherit">
-            <Link href="/posts">Posts</Link>
+            <Link href="/posts"><a>Posts</a></Link>
           </Button>
         </Toolbar>
       </AppBar>

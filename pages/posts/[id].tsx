@@ -17,7 +17,7 @@ export default function Post({ blog }) {
         }}
       />
       <Button color="primary">
-        <Link href="/posts">一覧へ戻る</Link>
+        <Link href="/posts"><a>一覧へ戻る</a></Link>
       </Button>
     </Container>
   )
@@ -25,15 +25,15 @@ export default function Post({ blog }) {
 
 // 静的生成のためのパスを指定
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blogs" });
-  const paths = data.contents.map((content) => `/posts/${content.id}`);
+  const data: {} = await client.get({ endpoint: "blogs" });
+  const paths: string = data.contents.map((content) => `/posts/${content.id}`);
   return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const data = await client.get({ endpoint: "blogs", contentId: id });
+  const id: string = context.params.id;
+  const data: {} = await client.get({ endpoint: "blogs", contentId: id });
   return {
     props: {
       blog: data,

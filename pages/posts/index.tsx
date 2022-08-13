@@ -21,7 +21,7 @@ export default function Posts({ blogs }) {
             </CardContent>
             <CardActions>
               <Button size="small">
-                <Link href={`/posts/${blog.id}`}>READ MORE</Link>
+                <Link href={`/posts/${blog.id}`}><a>READ MORE</a></Link>
               </Button>
             </CardActions>
           </Card>
@@ -34,7 +34,7 @@ export default function Posts({ blogs }) {
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blogs" });
+  const data: {} = await client.get({ endpoint: "blogs" });
 
   return {
     props: {
