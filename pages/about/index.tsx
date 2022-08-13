@@ -36,7 +36,7 @@ export default function About() {
             </CardContent>
             <CardActions>
               <Button size="small">
-                <a href="https://kys-consulting.com/" target="_blank" rel="noopener norefferrer">OPEN SITE</a>
+                <a href="https://kys-consulting.com/" target="_blank" rel="noopener noreferrer">OPEN SITE</a>
               </Button>
             </CardActions>
           </Card>
@@ -59,7 +59,7 @@ export default function About() {
             </CardContent>
             <CardActions>
               <Button size="small">
-                <a href="https://amore.escrit.jp/howto/" target="_blank" rel="noopener norefferrer">OPEN SITE</a>
+                <a href="https://amore.escrit.jp/howto/" target="_blank" rel="noopener noreferrer">OPEN SITE</a>
               </Button>
             </CardActions>
           </Card>
@@ -82,7 +82,7 @@ export default function About() {
             </CardContent>
             <CardActions>
               <Button size="small">
-                <a href="https://amore.escrit.jp/lp/" target="_blank" rel="noopener norefferrer">OPEN SITE</a>
+                <a href="https://amore.escrit.jp/lp/" target="_blank" rel="noopener noreferrer">OPEN SITE</a>
               </Button>
             </CardActions>
           </Card>
