@@ -25,7 +25,7 @@ export default function Post({ blog }) {
 
 // 静的生成のためのパスを指定
 export const getStaticPaths = async () => {
-  const data: {} = await client.get({ endpoint: "blogs" });
+  const data = await client.get({ endpoint: "blogs" });
   const paths: string = data.contents.map((content) => `/posts/${content.id}`);
   return { paths, fallback: false };
 };
