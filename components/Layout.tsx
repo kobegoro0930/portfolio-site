@@ -1,7 +1,7 @@
 import Head from '../node_modules/next/head'
 import Script from '../node_modules/next/script'
 import Image from '../node_modules/next/image'
-import Header from './modules/Header'
+import Header from './Header'
 
 export default function Layout({ children }) {
   return (

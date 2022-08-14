@@ -1,6 +1,6 @@
 
-import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '../../node_modules/@mui/material/index';
-import Link from '../../node_modules/next/link';
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '../node_modules/@mui/material/index';
+import Link from '../node_modules/next/link';
 
 export default function Header() {
   return (
