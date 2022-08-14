@@ -1,5 +1,5 @@
 import Link from "../../node_modules/next/link";
-import { client } from "../../libs/client";
+import { client } from "../../libs/client.ts";
 import { Card, CardActions, CardContent, Typography, Button, Container } from "../../node_modules/@mui/material/index";
 
 export default function Posts({ blogs }) {

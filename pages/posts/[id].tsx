@@ -1,5 +1,5 @@
 import Link from "../../node_modules/next/link";
-import { client } from "../../libs/client";
+import { client } from "../../libs/client.ts";
 import { Button, Container, Typography } from "../../node_modules/@mui/material/index";
 
 export default function Post({ blog }) {
