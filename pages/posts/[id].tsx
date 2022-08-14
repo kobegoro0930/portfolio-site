@@ -1,6 +1,6 @@
-import Link from "../../node_modules/next/link";
-import { client } from "../../libs/client.ts";
-import { Button, Container, Typography } from "../../node_modules/@mui/material/index";
+import Link from "next/link";
+import { client } from "/libs/client";
+import { Button, Container, Typography } from "@mui/material";
 
 export default function Post({ blog }) {
   return (
