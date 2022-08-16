@@ -1,8 +1,11 @@
-import Link from "../../node_modules/next/link";
+import Link from "next/link";
 import { client } from "../../libs/client";
-import { Card, CardActions, CardContent, Typography, Button, Container } from "../../node_modules/@mui/material/index";
+import { Card, CardActions, CardContent, Typography, Button, Container } from "@mui/material";
+import { InferGetStaticPropsType, NextPage } from 'next';
 
-export default function Posts({ blogs }) {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Posts: NextPage<Props> = ({ blogs }) => {
   return (
     <Container maxWidth="lg">
       <Typography variant='h4' component='h1' py={3}>
@@ -42,3 +45,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default Posts;

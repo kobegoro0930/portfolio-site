@@ -1,6 +1,6 @@
-import { Box, Container, Typography } from "../node_modules/@mui/material/index";
-import Image from "../node_modules/next/image";
-import imageSrc from '../public/work.jpg';
+import { Box, Container, Typography } from "@mui/material";
+import Image from "next/image";
+import imageSrc from '/public/work.jpg';
 
 export default function Home() {
   return (

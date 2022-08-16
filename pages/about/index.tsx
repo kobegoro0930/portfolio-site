@@ -1,5 +1,5 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from "../../node_modules/@mui/material/index";
-import Link from "../../node_modules/next/link";
+import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
+import Link from "next/link";
 
 export default function About() {
   return (

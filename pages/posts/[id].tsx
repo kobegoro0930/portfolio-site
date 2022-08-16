@@ -1,8 +1,11 @@
-import Link from "../../node_modules/next/link";
+import Link from "next/link";
 import { client } from "../../libs/client";
-import { Button, Container, Typography } from "../../node_modules/@mui/material/index";
+import { Button, Container, Typography } from "@mui/material";
+import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next';
 
-export default function Post({ blog }) {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Post: NextPage<Props> = ({ blog }) => {
   return (
     <Container maxWidth="lg">
       <Typography variant='h4' component='h1' py={3}>
@@ -26,17 +29,21 @@ export default function Post({ blog }) {
 // 静的生成のためのパスを指定
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "blogs" });
-  const paths: string = data.contents.map((content) => `/posts/${content.id}`);
+  const paths = data.contents.map((content) => `/posts/${content.id}`);
   return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理
-export const getStaticProps = async (context) => {
-  const id: string = context.params.id;
-  const data: {} = await client.get({ endpoint: "blogs", contentId: id });
+export const getStaticProps = async (
+  context: GetStaticPropsContext<{ id: string }>
+) => {
+  const id = context.params.id;
+  const data = await client.get({ endpoint: "blogs", contentId: id });
   return {
     props: {
       blog: data,
     },
   };
 };
+
+export default Post;

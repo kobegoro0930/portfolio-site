@@ -1,4 +1,4 @@
-import { Container, Rating, Table, TableBody, TableCell, TableRow } from "../../node_modules/@mui/material/index";
+import { Container, Rating, Table, TableBody, TableCell, TableRow } from "@mui/material";
 
 export default function Skills() {
   return (
