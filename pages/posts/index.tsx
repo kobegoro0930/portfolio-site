@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { client } from "../libs/client";
+import { client } from "/libs/client";
 import { Card, CardActions, CardContent, Typography, Button, Container } from "@mui/material";
 import { InferGetStaticPropsType, NextPage } from 'next';
 
