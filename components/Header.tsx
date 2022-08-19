@@ -22,6 +22,9 @@ export default function Header() {
           <Button color="inherit">
             <Link href="/posts"><a>Posts</a></Link>
           </Button>
+          <Button color="inherit">
+            <Link href="/charts"><a>Charts</a></Link>
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
