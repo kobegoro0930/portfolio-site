@@ -10,7 +10,7 @@ import Select from "react-select";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const ChartComponent = dynamic(() => import('../../components/Chart'));
+const ChartComponent = dynamic(() => import('../../components/chart'));
 
 const Chart = ({ logs }) => {
 const processedData = logs.map(log => {
