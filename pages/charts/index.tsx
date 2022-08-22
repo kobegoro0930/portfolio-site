@@ -6,7 +6,7 @@ import timezone from 'dayjs/plugin/timezone';
 import { useEffect, useState } from "react";
 import { Typography, Container, Box } from "@mui/material";
 import Select from "react-select";
-import { InferGetServerSidePropsType } from 'next'
+import { InferGetServerSidePropsType, NextPage } from 'next'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
