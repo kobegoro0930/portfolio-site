@@ -28,9 +28,9 @@ const Chart: NextPage<Props> = ({ logs }) => {
   }).reverse();
 
   // 種目ごとのデータ作成
-  const chestTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルフライ（胸筋）');
-  const bicepsTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルカール（二頭筋）');
-  const tricepsTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルプルオーバー（三頭筋）');
+  const chestTrainingData = processedAllData.filter(data => data.menu[0] === 'ダンベルフライ（胸筋）');
+  const bicepsTrainingData = processedAllData.filter(data => data.menu[0] === 'ダンベルカール（二頭筋）');
+  const tricepsTrainingData = processedAllData.filter(data => data.menu[0] === 'ダンベルプルオーバー（三頭筋）');
 
   const [selectedMenu, setSelectedMenu] = useState("");
   const [selectedMenuTrainingData, setSelectedMenuTrainingData] = useState<Data>(chestTrainingData);
