@@ -6,14 +6,20 @@ import timezone from 'dayjs/plugin/timezone';
 import { useEffect, useState } from "react";
 import { Typography, Container, Box } from "@mui/material";
 import Select from "react-select";
+import { InferGetServerSidePropsType } from 'next'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const ChartComponent = dynamic(() => import('../../components/chart'));
 
-const Chart = ({ logs }) => {
-const processedData = logs.map(log => {
+type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
+
+const Chart: NextPage<Props> = ({ logs }) => {
+  type Data = { menu: string, weight: number, date: string };
+
+  // 全件取得データの加工
+  const processedAllData: Data = logs.map(log => {
     return {
       menu: log.menu,
       weight: log.weight,
@@ -21,12 +27,13 @@ const processedData = logs.map(log => {
     }
   }).reverse();
 
-  const chestTrainingData = processedData.filter(data => data.menu[0] === 'ダンベルフライ（胸筋）');
-  const bicepsTrainingData = processedData.filter(data => data.menu[0] === 'ダンベルカール（二頭筋）');
-  const tricepsTrainingData = processedData.filter(data => data.menu[0] === 'ダンベルプルオーバー（三頭筋）');
+  // 種目ごとのデータ作成
+  const chestTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルフライ（胸筋）');
+  const bicepsTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルカール（二頭筋）');
+  const tricepsTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルプルオーバー（三頭筋）');
 
-  const [selectedMenu, setSelectedMenu] = useState();
-  const [selectedMenuTrainingData, setSelectedMenuTrainingData] = useState(chestTrainingData);
+  const [selectedMenu, setSelectedMenu] = useState("");
+  const [selectedMenuTrainingData, setSelectedMenuTrainingData] = useState<Data>(chestTrainingData);
 
   useEffect(() => {
     switch (selectedMenu) {
@@ -49,7 +56,7 @@ const processedData = logs.map(log => {
     { value: 'triceps', label: 'ダンベルプルオーバー（三頭筋）' }
   ]
 
-  const handleSetSelectedMenu = (data) => {
+  const handleSetSelectedMenu = (data: string) => {
     setSelectedMenu(data);
   }
 
