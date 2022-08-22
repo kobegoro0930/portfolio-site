@@ -19,7 +19,7 @@ const Chart: NextPage<Props> = ({ logs }) => {
   type Data = { menu: string, weight: number, date: string };
 
   // 全件取得データの加工
-  const processedAllData: Data = logs.map(log => {
+  const processedAllData = logs.map(log => {
     return {
       menu: log.menu,
       weight: log.weight,
@@ -28,9 +28,9 @@ const Chart: NextPage<Props> = ({ logs }) => {
   }).reverse();
 
   // 種目ごとのデータ作成
-  const chestTrainingData = processedAllData.filter(data => data.menu[0] === 'ダンベルフライ（胸筋）');
-  const bicepsTrainingData = processedAllData.filter(data => data.menu[0] === 'ダンベルカール（二頭筋）');
-  const tricepsTrainingData = processedAllData.filter(data => data.menu[0] === 'ダンベルプルオーバー（三頭筋）');
+  const chestTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルフライ（胸筋）');
+  const bicepsTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルカール（二頭筋）');
+  const tricepsTrainingData: Data = processedAllData.filter(data => data.menu[0] === 'ダンベルプルオーバー（三頭筋）');
 
   const [selectedMenu, setSelectedMenu] = useState("");
   const [selectedMenuTrainingData, setSelectedMenuTrainingData] = useState<Data>(chestTrainingData);
