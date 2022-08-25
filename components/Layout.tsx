@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import Image from 'next/image'
-import Header from './Header'
+import { Box } from '@mui/material';
+import Dashboard from './dashboard/Dashboard';
 
 export default function Layout({ children }) {
   return (
@@ -13,11 +13,7 @@ export default function Layout({ children }) {
         <meta name="description" content="ポートフォリオ用に作成したサイトです。使用技術：React.js・Next.js・TypeScript・microCMS" />
       </Head>
 
-      <Header />
-
-      <main>{children}</main>
-
-      <footer className="footer"></footer>
+      <Dashboard pageProps={ children } />
     </>
   )
 }

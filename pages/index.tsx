@@ -1,20 +1,48 @@
-import { Box, Container, Typography } from "@mui/material";
-import Image from "next/image";
-import imageSrc from '/public/work.jpg';
+import Link from "next/link";
+import { client } from "../libs/client";
+import { Card, CardActions, CardContent, Typography, Button, Container } from "@mui/material";
+import { InferGetStaticPropsType, NextPage } from 'next';
 
-export default function Home() {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Posts: NextPage<Props> = ({ blogs }) => {
   return (
-    <>
-      <Container maxWidth="lg">
-        <Typography variant="h1" component="h2" p={4} mb={5}>
-          Web Developer
-          <br />
-          Front-End Engineer
-        </Typography>
-        <Container maxWidth='sm'>
-          <Image src={imageSrc} layout='responsive' alt='logo' />
+    <Container maxWidth="lg">
+      <Typography variant='h4' component='h1' py={3}>
+        筋トレブログ　新着一覧
+      </Typography>
+      {blogs.map((blog) => (
+        <Container maxWidth="sm" key={blog.id}>
+          <Card sx={{mb:2}}>
+            <CardContent>
+              <Typography mb={1} color="text.secondary">
+                {new Date(blog.publishedAt).toLocaleDateString()}
+              </Typography>
+              <Typography variant="h5" component="h2">
+                {blog.title}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">
+                <Link href={`/${blog.id}`}><a>READ MORE</a></Link>
+              </Button>
+            </CardActions>
+          </Card>
         </Container>
-      </Container>
-    </>
+      ))}
+    </Container>
   )
 }
+
+// データをテンプレートに受け渡す部分の処理
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blogs" });
+
+  return {
+    props: {
+      blogs: data.contents,
+    },
+  };
+};
+
+export default Posts;
