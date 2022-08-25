@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { Box } from '@mui/material';
-import Dashboard from '../pages/dashboard/Dashboard';
+import Dashboard from './dashboard/Dashboard';
 
 export default function Layout({ children }) {
   return (
