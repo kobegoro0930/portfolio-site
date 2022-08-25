@@ -14,7 +14,7 @@ export const mainListItems = (
       <ListItemIcon>
         <MenuBookIcon />
       </ListItemIcon>
-      <NextLink href="/" underline="none" passHref>
+      <NextLink href="/">
         <MuiLink underline="none" color="teal">
           ブログ
         </MuiLink>
