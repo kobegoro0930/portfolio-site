@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { client } from "../../libs/client";
+import { client } from "../libs/client";
 import { Button, Container, Typography } from "@mui/material";
 import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next';
 
@@ -20,7 +20,7 @@ const Post: NextPage<Props> = ({ blog }) => {
         }}
       />
       <Button color="primary">
-        <Link href="/posts"><a>一覧へ戻る</a></Link>
+        <Link href="/"><a>一覧へ戻る</a></Link>
       </Button>
     </Container>
   )
@@ -29,7 +29,7 @@ const Post: NextPage<Props> = ({ blog }) => {
 // 静的生成のためのパスを指定
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "blogs" });
-  const paths = data.contents.map((content) => `/posts/${content.id}`);
+  const paths = data.contents.map((content) => `/${content.id}`);
   return { paths, fallback: false };
 };
 

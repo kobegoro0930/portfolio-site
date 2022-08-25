@@ -12,7 +12,7 @@ export default function About() {
       </Typography>
       <Typography pb={5}>
         元々は広告・人材・飲食など、いろいろな業界でお仕事をしてきました。<br />
-        2018年〜Web業界へ。ディレクターからスタートし、現在は主にコーダーとしてお仕事をさせていただいています。
+        2018年〜Web業界へ。ディレクターからスタートし、現在は主にWebサイト・LPの制作をしています。
       </Typography>
       <Typography variant='h5' component='h2' py={3}>
         制作例
