@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Typography, Container, Box } from "@mui/material";
 import Select from "react-select";
 import { InferGetServerSidePropsType, NextPage } from 'next'
+import BasicTable from "../../components/table";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -76,7 +77,13 @@ const Chart: NextPage<Props> = ({ logs }) => {
         />
       </Box>
 
-      <ChartComponent data={ selectedMenuTrainingData } />
+
+      <Container sx={{display: "flex", marginBottom: 10}}>
+        <Container>
+          <ChartComponent data={ selectedMenuTrainingData } />
+        </Container>
+        <BasicTable data={ selectedMenuTrainingData } />
+      </Container>
 
     </Container>
   )
