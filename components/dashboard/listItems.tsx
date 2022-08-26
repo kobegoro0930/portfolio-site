@@ -10,45 +10,45 @@ import MuiLink from "@mui/material/Link"
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <MenuBookIcon />
-      </ListItemIcon>
-      <NextLink href="/">
+    <NextLink href="/">
+      <ListItemButton>
+        <ListItemIcon>
+          <MenuBookIcon />
+        </ListItemIcon>
         <MuiLink underline="none" color="teal">
           ブログ
         </MuiLink>
-      </NextLink>
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <NextLink href="/charts">
+      </ListItemButton>
+    </NextLink>
+    <NextLink href="/charts">
+      <ListItemButton>
+        <ListItemIcon>
+          <BarChartIcon />
+        </ListItemIcon>
         <MuiLink underline="none" color="teal">
           チャート
         </MuiLink>
-      </NextLink>
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <NextLink href="/about">
+      </ListItemButton>
+    </NextLink>
+    <NextLink href="/about">
+      <ListItemButton>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
         <MuiLink underline="none" color="teal">
           自己紹介
         </MuiLink>
-      </NextLink>
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <NextLink href="/skills">
+      </ListItemButton>
+    </NextLink>
+    <NextLink href="/skills">
+      <ListItemButton>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
         <MuiLink underline="none" color="teal">
           スキル
         </MuiLink>
-      </NextLink>
-    </ListItemButton>
+      </ListItemButton>
+    </NextLink>
   </React.Fragment>
 );
