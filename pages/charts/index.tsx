@@ -6,7 +6,7 @@ import timezone from 'dayjs/plugin/timezone';
 import { useEffect, useState } from "react";
 import { Typography, Container, Box } from "@mui/material";
 import Select from "react-select";
-import { InferGetServerSidePropsType, NextPage } from 'next'
+import { InferGetStaticPropsType, NextPage } from 'next';
 import BasicTable from "../../components/table";
 
 dayjs.extend(utc);
@@ -14,7 +14,7 @@ dayjs.extend(timezone);
 
 const ChartComponent = dynamic(() => import('../../components/chart'));
 
-type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const Chart: NextPage<Props> = ({ logs }) => {
   type Data = { menu: string, weight: number, date: string };
@@ -89,8 +89,8 @@ const Chart: NextPage<Props> = ({ logs }) => {
   )
 }
 
-// SSRでデータの取得
-export const getServerSideProps = async () => {
+// SSGでデータの取得
+export const getStaticProps = async () => {
   const data = await client.get({
     endpoint: "training_log",
     queries: { limit: 200 }
