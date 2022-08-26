@@ -1,5 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import { Table, TableBody, TableCell, TableRow } from "../../node_modules/@mui/material/index";
 
 export default function About() {
   return (
@@ -29,10 +30,22 @@ export default function About() {
               <Typography gutterBottom variant="h5" component="div">
                 HP（コーポレートサイト）
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                担当：コーディング<br />
-                技術：WordPress・SCSS
-              </Typography>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>担当</TableCell>
+                    <TableCell>コーディング・WordPress実装</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>技術</TableCell>
+                    <TableCell>WordPress・HTML・SCSS</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>制作意図</TableCell>
+                    <TableCell>シンプルながらオリジナリティのあるWebサイトにしたいとのご要望だった為、パララックスを用いたり、コンテンツ幅を複雑に構成するなどをして、印象に残るサイトになるよう制作をしました。</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </CardContent>
             <CardActions>
               <Button size="small">
@@ -52,10 +65,22 @@ export default function About() {
               <Typography gutterBottom variant="h5" component="div">
                 OM（オウンドメディア）
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                担当：コーディング<br />
-                技術：WordPress・SCSS
-              </Typography>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>担当</TableCell>
+                    <TableCell>コーディング・WordPress実装</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>技術</TableCell>
+                    <TableCell>WordPress・HTML・SCSS</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>制作意図</TableCell>
+                    <TableCell>メディアサイトのリニューアル依頼。SEO向上の為、導線を意識した仕様を盛り込みました。</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </CardContent>
             <CardActions>
               <Button size="small">
@@ -75,10 +100,22 @@ export default function About() {
               <Typography gutterBottom variant="h5" component="div">
                 LP（ランディングページ）
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                担当：コーディング<br />
-                技術：SCSS
-              </Typography>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>担当</TableCell>
+                    <TableCell>コーディング</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>技術</TableCell>
+                    <TableCell>HTML・SCSS</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>制作意図</TableCell>
+                    <TableCell>短納期での依頼でしたが、デザインに忠実に制作しました。JSでシンプルでさりげない動きをつけました。</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </CardContent>
             <CardActions>
               <Button size="small">
