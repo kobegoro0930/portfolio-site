@@ -8,7 +8,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 const Post: NextPage<Props> = ({ blog }) => {
   return (
     <Container maxWidth="lg">
-      <Typography variant='h4' component='h1' py={3}>
+      <Typography variant='h4' component='h1' py={3} sx={{fontWeight: "800"}}>
         {blog.title}
       </Typography>
       <Typography mb={1} color="text.secondary">

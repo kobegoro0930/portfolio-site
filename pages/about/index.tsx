@@ -5,7 +5,7 @@ import { Table, TableBody, TableCell, TableRow } from "../../node_modules/@mui/m
 export default function About() {
   return (
     <Container maxWidth="lg">
-      <Typography variant='h4' component='h1' py={3}>
+      <Typography variant='h4' component='h1' py={3} sx={{fontWeight: "800"}}>
         自己紹介
       </Typography>
       <Typography variant='h5' component='h2' py={3}>

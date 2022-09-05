@@ -8,8 +8,8 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 const Posts: NextPage<Props> = ({ blogs }) => {
   return (
     <Container maxWidth="lg">
-      <Typography variant='h4' component='h1' py={3}>
-        筋トレブログ　新着一覧
+      <Typography variant='h4' component='h1' py={3} sx={{fontWeight: "800"}}>
+        ブログ
       </Typography>
       {blogs.map((blog) => (
         <Container maxWidth="sm" key={blog.id}>

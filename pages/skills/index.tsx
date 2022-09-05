@@ -3,7 +3,7 @@ import { Container, Rating, Table, TableBody, TableCell, TableRow, Typography } 
 export default function Skills() {
   return (
     <Container maxWidth="lg">
-      <Typography variant='h4' component='h1' py={3}>
+      <Typography variant='h4' component='h1' py={3} sx={{fontWeight: "800"}}>
         スキル
       </Typography>
       <Table>

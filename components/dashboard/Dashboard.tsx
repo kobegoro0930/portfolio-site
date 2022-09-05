@@ -12,6 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems } from './listItems';
+import { Container } from '@mui/material';
 
 const drawerWidth: number = 240;
 
@@ -93,15 +94,17 @@ function DashboardContent({ pageProps }) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              KEN TERAMOTO
-            </Typography>
+            <Container>
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+                sx={{ flexGrow: 1 }}
+              >
+                KEN TERAMOTO
+              </Typography>
+            </Container>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
