@@ -64,12 +64,12 @@ const Chart: NextPage<Props> = ({ logs }) => {
   return (
     <Container maxWidth="lg">
       <Typography variant='h4' component='h1' py={3} sx={{fontWeight: "800"}}>
-        筋トレチャート
+        トレーニング記録
       </Typography>
 
       <Typography component="span">種目</Typography>
 
-      <Box sx={{ width: 300 }}>
+      <Box sx={{ width: 300, marginTop: 1 }}>
         <Select
           options={options}
           defaultValue={{label:'ダンベルフライ（胸筋）',value:'chest'}}
@@ -78,12 +78,10 @@ const Chart: NextPage<Props> = ({ logs }) => {
       </Box>
 
 
-      <Container sx={{display: "flex", marginBottom: 10}}>
-        <Container>
-          <ChartComponent data={ selectedMenuTrainingData } />
-        </Container>
+      <Box sx={{display: "flex", marginBottom: 10}}>
+        <ChartComponent data={ selectedMenuTrainingData } />
         <BasicTable data={ selectedMenuTrainingData } />
-      </Container>
+      </Box>
 
     </Container>
   )

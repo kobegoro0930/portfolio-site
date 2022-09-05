@@ -26,7 +26,7 @@ export const mainListItems = (
           <BarChartIcon />
         </ListItemIcon>
         <MuiLink underline="none" color="teal">
-          チャート
+          トレーニング記録
         </MuiLink>
       </ListItemButton>
     </NextLink>
