@@ -12,23 +12,23 @@ const Posts: NextPage<Props> = ({ blogs }) => {
         ブログ
       </Typography>
       {blogs.map((blog) => (
-        <Container maxWidth="sm" key={blog.id}>
-          <Card sx={{mb:2}}>
-            <CardContent>
-              <Typography mb={1} color="text.secondary">
-                {new Date(blog.publishedAt).toLocaleDateString()}
-              </Typography>
-              <Typography variant="h5" component="h2">
-                {blog.title}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">
-                <Link href={`/${blog.id}`}><a>READ MORE</a></Link>
-              </Button>
-            </CardActions>
-          </Card>
-        </Container>
+        <Card sx={{mb:2, width: 600}} key={blog.id}>
+          <CardContent>
+            <Typography mb={1} color="text.secondary" sx={{fontSize: 14}}>
+              {new Date(blog.publishedAt).toLocaleDateString()}
+            </Typography>
+            <Typography variant="h6" component="h2" sx={{fontWeight: "800"}}>
+              {blog.title}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">
+              <Link href={`/${blog.id}`}><a>もっと見る</a></Link>
+            </Button>
+          </CardActions>
+        </Card>
+        // <Container maxWidth="sm" key={blog.id}>
+        // </Container>
       ))}
     </Container>
   )
