@@ -2,7 +2,7 @@ import * as React from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PeopleIcon from '@mui/icons-material/People';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import ConstructionIcon from '@mui/icons-material/Construction';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import NextLink from "next/link";
@@ -15,7 +15,7 @@ export const mainListItems = (
         <ListItemIcon>
           <MenuBookIcon />
         </ListItemIcon>
-        <MuiLink underline="none" color="teal">
+        <MuiLink underline="none" color="rgba(0, 0, 0, 0.54)">
           ブログ
         </MuiLink>
       </ListItemButton>
@@ -25,7 +25,7 @@ export const mainListItems = (
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
-        <MuiLink underline="none" color="teal">
+        <MuiLink underline="none" color="rgba(0, 0, 0, 0.54)">
           トレーニング記録
         </MuiLink>
       </ListItemButton>
@@ -35,7 +35,7 @@ export const mainListItems = (
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
-        <MuiLink underline="none" color="teal">
+        <MuiLink underline="none" color="rgba(0, 0, 0, 0.54)">
           自己紹介
         </MuiLink>
       </ListItemButton>
@@ -43,9 +43,9 @@ export const mainListItems = (
     <NextLink href="/skills">
       <ListItemButton>
         <ListItemIcon>
-          <AssignmentIcon />
+          <ConstructionIcon />
         </ListItemIcon>
-        <MuiLink underline="none" color="teal">
+        <MuiLink underline="none" color="rgba(0, 0, 0, 0.54)">
           スキル
         </MuiLink>
       </ListItemButton>
