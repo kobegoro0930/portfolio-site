@@ -12,6 +12,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems } from './listItems';
+import { Container } from '@mui/material';
+import Image from 'next/image';
 
 const drawerWidth: number = 240;
 
@@ -63,7 +65,11 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-const mdTheme = createTheme();
+const mdTheme = createTheme({
+  typography: {
+    fontFamily: ["Noto Sans JP"].join(","),
+  },
+});
 
 function DashboardContent({ pageProps }) {
   const [open, setOpen] = React.useState(true);
@@ -93,15 +99,30 @@ function DashboardContent({ pageProps }) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              KEN TERAMOTO
-            </Typography>
+            <Container sx={{display: "flex", justifyContent: "space-between"}}>
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+                sx={{ flexGrow: 1 }}
+              >
+                ポートフォリオサイト
+              </Typography>
+              <Box sx={{display: "flex", alignItems: "center"}}>
+                <Typography
+                  sx={{paddingRight: 1}}
+                >
+                  寺本 謙
+                </Typography>
+                <Image
+                  src="/image.jpg"
+                  width={35}
+                  height={35}
+                  style={{borderRadius: "50%"}}
+                />
+              </Box>
+            </Container>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>

@@ -5,21 +5,20 @@ import { Table, TableBody, TableCell, TableRow } from "../../node_modules/@mui/m
 export default function About() {
   return (
     <Container maxWidth="lg">
-      <Typography variant='h4' component='h1' py={3}>
+      <Typography variant='h4' component='h1' py={3} sx={{fontWeight: "800"}}>
         自己紹介
       </Typography>
-      <Typography variant='h5' component='h2' py={3}>
-        経歴
-      </Typography>
       <Typography pb={5}>
-        元々は広告・人材・飲食など、いろいろな業界でお仕事をしてきました。<br />
+        寺本 謙と申します。<br />
+        大分県別府市生まれ。兵庫県神戸市出身。大学卒業後上京しました。<br />
+        広告・人材・飲食など、いろいろな業界でお仕事をしてきました。<br />
         2018年〜Web業界へ。ディレクターからスタートし、現在は主にWebサイト・LPの制作をしています。
       </Typography>
       <Typography variant='h5' component='h2' py={3}>
         制作例
       </Typography>
       <Grid container>
-        <Grid item xs={4}>
+        <Grid item xs={4} sx={{marginBottom: 5}}>
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
