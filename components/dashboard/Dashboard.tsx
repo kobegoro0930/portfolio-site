@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems } from './listItems';
 import { Container } from '@mui/material';
+import Image from 'next/image';
 
 const drawerWidth: number = 240;
 
@@ -98,7 +99,7 @@ function DashboardContent({ pageProps }) {
             >
               <MenuIcon />
             </IconButton>
-            <Container>
+            <Container sx={{display: "flex", justifyContent: "space-between"}}>
               <Typography
                 component="h1"
                 variant="h6"
@@ -106,8 +107,21 @@ function DashboardContent({ pageProps }) {
                 noWrap
                 sx={{ flexGrow: 1 }}
               >
-                KEN TERAMOTO
+                ポートフォリオサイト
               </Typography>
+              <Box sx={{display: "flex", alignItems: "center"}}>
+                <Typography
+                  sx={{paddingRight: 1}}
+                >
+                  寺本 謙
+                </Typography>
+                <Image
+                  src="/image.jpg"
+                  width={35}
+                  height={35}
+                  style={{borderRadius: "50%"}}
+                />
+              </Box>
             </Container>
           </Toolbar>
         </AppBar>
