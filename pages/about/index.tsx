@@ -11,7 +11,7 @@ export default function About() {
       <Typography pb={5}>
         寺本 謙と申します。<br />
         大分県別府市生まれ。兵庫県神戸市出身。大学卒業後上京しました。<br />
-        広告・人材・飲食など、いろいろな業界でお仕事をしてきました。<br />
+        広告・人材・飲食など、いろいろな業界でお仕事をしていました。<br />
         2018年〜Web業界へ。ディレクターからスタートし、現在は主にWebサイト・LPの制作をしています。
       </Typography>
       <Typography variant='h5' component='h2' py={3}>
