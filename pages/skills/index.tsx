@@ -12,7 +12,7 @@ export default function Skills() {
             <TableCell>技術</TableCell>
             <TableCell>使用期間</TableCell>
             <TableCell>熟練度</TableCell>
-            <TableCell>詳細</TableCell>
+            <TableCell>できること</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
