@@ -14,6 +14,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems } from './listItems';
 import { Container } from '@mui/material';
 import Image from 'next/image';
+import Link from "next/link";
 
 const drawerWidth: number = 240;
 
@@ -109,19 +110,21 @@ function DashboardContent({ pageProps }) {
               >
                 ポートフォリオサイト
               </Typography>
-              <Box sx={{display: "flex", alignItems: "center"}}>
-                <Typography
-                  sx={{paddingRight: 1}}
-                >
-                  寺本 謙
-                </Typography>
-                <Image
-                  src="/image.jpg"
-                  width={35}
-                  height={35}
-                  style={{borderRadius: "50%"}}
-                />
-              </Box>
+              <Link href="/about/">
+                <Box sx={{display: "flex", alignItems: "center", cursor: "pointer"}}>
+                  <Typography
+                    sx={{paddingRight: 1}}
+                  >
+                    寺本 謙
+                  </Typography>
+                  <Image
+                    src="/image.jpg"
+                    width={35}
+                    height={35}
+                    style={{borderRadius: "50%"}}
+                  />
+                </Box>
+              </Link>
             </Container>
           </Toolbar>
         </AppBar>
