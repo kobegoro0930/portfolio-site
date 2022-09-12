@@ -70,6 +70,15 @@ const mdTheme = createTheme({
   typography: {
     fontFamily: ["Noto Sans JP"].join(","),
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 375,
+      md: 768,
+      lg: 1025,
+      xl: 1536,
+    },
+  },
 });
 
 function DashboardContent({ pageProps }) {
