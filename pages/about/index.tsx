@@ -17,9 +17,9 @@ export default function About() {
       <Typography variant='h5' component='h2' py={3}>
         制作例
       </Typography>
-      <Grid container>
-        <Grid item xs={4} sx={{marginBottom: 5}}>
-          <Card sx={{ maxWidth: 345 }}>
+      <Grid container spacing={2}>
+        <Grid item lg md={6} xs={12} sx={{marginBottom: 5}}>
+          <Card>
             <CardMedia
               component="img"
               height="140"
@@ -53,8 +53,8 @@ export default function About() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
-          <Card sx={{ maxWidth: 345 }}>
+        <Grid item lg md={6} xs={12}>
+          <Card>
             <CardMedia
               component="img"
               height="140"
@@ -88,8 +88,8 @@ export default function About() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
-          <Card sx={{ maxWidth: 345 }}>
+        <Grid item lg md={6} xs={12}>
+          <Card>
             <CardMedia
               component="img"
               height="140"

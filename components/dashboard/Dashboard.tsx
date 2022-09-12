@@ -57,7 +57,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
         }),
-        width: theme.spacing(7),
+        width: 0,
         [theme.breakpoints.up('sm')]: {
           width: theme.spacing(9),
         },
@@ -69,15 +69,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const mdTheme = createTheme({
   typography: {
     fontFamily: ["Noto Sans JP"].join(","),
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 375,
-      md: 768,
-      lg: 1025,
-      xl: 1536,
-    },
   },
 });
 
@@ -120,7 +111,12 @@ function DashboardContent({ pageProps }) {
                 ポートフォリオサイト
               </Typography>
               <Link href="/about/">
-                <Box sx={{display: "flex", alignItems: "center", cursor: "pointer"}}>
+                <Box sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  "@media screen and (max-width:767px)": { display: "none" },
+                }}>
                   <Typography
                     sx={{paddingRight: 1}}
                   >

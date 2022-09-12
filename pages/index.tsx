@@ -12,7 +12,10 @@ const Posts: NextPage<Props> = ({ blogs }) => {
         ブログ
       </Typography>
       {blogs.map((blog) => (
-        <Card sx={{mb:2, width: 600}} key={blog.id}>
+        <Card sx={{
+          mb:2, width: 600,
+          "@media screen and (max-width:900px)": { width: "100%"},
+        }} key={blog.id}>
           <CardContent>
             <Typography mb={1} color="text.secondary" sx={{fontSize: 14}}>
               {new Date(blog.publishedAt).toLocaleDateString()}
@@ -27,8 +30,6 @@ const Posts: NextPage<Props> = ({ blogs }) => {
             </Button>
           </CardActions>
         </Card>
-        // <Container maxWidth="sm" key={blog.id}>
-        // </Container>
       ))}
     </Container>
   )
