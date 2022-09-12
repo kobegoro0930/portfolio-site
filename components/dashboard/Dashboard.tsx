@@ -57,7 +57,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
         }),
-        width: theme.spacing(7),
+        width: 0,
         [theme.breakpoints.up('sm')]: {
           width: theme.spacing(9),
         },
@@ -111,7 +111,12 @@ function DashboardContent({ pageProps }) {
                 ポートフォリオサイト
               </Typography>
               <Link href="/about/">
-                <Box sx={{display: "flex", alignItems: "center", cursor: "pointer"}}>
+                <Box sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  "@media screen and (max-width:767px)": { display: "none" },
+                }}>
                   <Typography
                     sx={{paddingRight: 1}}
                   >

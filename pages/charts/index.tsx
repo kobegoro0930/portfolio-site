@@ -78,7 +78,11 @@ const Chart: NextPage<Props> = ({ logs }) => {
       </Box>
 
 
-      <Box sx={{display: "flex", marginBottom: 10}}>
+      <Box sx={{
+        display: "flex",
+        marginBottom: 10,
+        "@media screen and (max-width:1200px)": { display: "block" }
+      }}>
         <ChartComponent data={ selectedMenuTrainingData } />
         <BasicTable data={ selectedMenuTrainingData } />
       </Box>
